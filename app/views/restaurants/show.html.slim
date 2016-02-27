@@ -1,0 +1,11 @@
+h2
+  = @restaurant.name
+
+div
+  p
+    = @restaurant.description
+h3
+  | Comments Section
+div
+  - @comments.each do |comment|
+    = react_component('Comment', { author: comment.author, body: comment.body, rank: comment.rank })

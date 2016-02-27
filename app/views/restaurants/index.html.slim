@@ -1,0 +1,6 @@
+h2
+  | Hello from the Restaurant Site!
+section
+  - @restaurants.each do |restaurant|
+    div
+      = link_to restaurant.name, restaurant_path(restaurant.id)
